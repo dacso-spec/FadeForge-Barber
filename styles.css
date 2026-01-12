@@ -1622,6 +1622,17 @@ p {
   .container {
     padding: 0 var(--section-x);
   }
+
+  .hero {
+    min-height: 100svh;
+    align-items: flex-start;
+    padding-top: 6.5rem;
+    padding-bottom: var(--space-3xl);
+  }
+
+  .hero__content {
+    margin-top: 0;
+  }
   
   .section {
     padding: var(--space-3xl) var(--section-x);
