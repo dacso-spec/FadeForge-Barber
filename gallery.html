@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Gallery - FadeForge Barber, Shoreditch</title>
+  <meta name="description" content="Cuts, fades, and beards from the chair - FadeForge Barber gallery."/>
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg">
+  <link rel="canonical" href="https://fadeforge.example/gallery.html">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="page-transition" aria-hidden="true"></div>
+  <header class="site-header" data-animate>
+    <div class="site-header__inner">
+      <a class="logo" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h4l2 3h4l2 3-4 12h-4L4 3z" fill="currentColor"/></svg>
+        <span>FadeForge</span>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
+        <a class="btn ghost" data-bind="booking" href="book.html">Book</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="page-main">
+    <section class="page-hero" data-animate>
+      <div class="container">
+        <h1 class="split">Gallery</h1>
+        <p>Precision cuts, razor lines, and clean fades. Tap any shot to zoom in.</p>
+      </div>
+    </section>
+    <section class="gallery-grid" data-animate data-ember-vortex="soft">
+      <figure class="gallery-shot">
+        <img src="assets/gallery-01.jpeg" alt="Skin fade - clean finish" loading="lazy">
+        <figcaption>Skin fade - clean finish</figcaption>
+      </figure>
+      <figure class="gallery-shot">
+        <img src="assets/gallery-02.jpeg" alt="Classic scissor cut" loading="lazy">
+        <figcaption>Classic scissor cut</figcaption>
+      </figure>
+      <figure class="gallery-shot">
+        <img src="assets/gallery-03.jpeg" alt="Beard sculpt - sharp lines" loading="lazy">
+        <figcaption>Beard sculpt - sharp lines</figcaption>
+      </figure>
+      <figure class="gallery-shot">
+        <img src="assets/gallery-04.jpeg" alt="Hot towel shave" loading="lazy">
+        <figcaption>Hot towel shave</figcaption>
+      </figure>
+      <figure class="gallery-shot">
+        <img src="assets/gallery-05.jpeg" alt="Low fade - texture top" loading="lazy">
+        <figcaption>Low fade - texture top</figcaption>
+      </figure>
+      <figure class="gallery-shot">
+        <img src="assets/gallery-06.jpeg" alt="Kids cut - tidy finish" loading="lazy">
+        <figcaption>Kids cut - tidy finish</figcaption>
+      </figure>
+      <figure class="gallery-shot">
+        <img src="assets/gallery-07.jpeg" alt="Colour blend - subtle camo" loading="lazy">
+        <figcaption>Colour blend - subtle camo</figcaption>
+      </figure>
+      <figure class="gallery-shot">
+        <img src="assets/gallery-08.jpeg" alt="Line-up detail" loading="lazy">
+        <figcaption>Line-up detail</figcaption>
+      </figure>
+      <figure class="gallery-shot">
+        <img src="assets/gallery-09.jpeg" alt="Classic side part" loading="lazy">
+        <figcaption>Classic side part</figcaption>
+      </figure>
+      <figure class="gallery-shot">
+        <img src="assets/gallery-10.jpeg" alt="Textured crop" loading="lazy">
+        <figcaption>Textured crop</figcaption>
+      </figure>
+      <figure class="gallery-shot">
+        <img src="assets/gallery-11.jpeg" alt="High fade with curls" loading="lazy">
+        <figcaption>High fade with curls</figcaption>
+      </figure>
+      <figure class="gallery-shot">
+        <img src="assets/gallery-12.jpeg" alt="Long scissor layers" loading="lazy">
+        <figcaption>Long scissor layers</figcaption>
+      </figure>
+    </section>
+    <div class="lightbox" id="gallery-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+      <button class="lightbox-close" type="button" aria-label="Close gallery">Close</button>
+      <img alt="">
+    </div>
+  </main>
+  <footer class="cta-footer">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>FADEFORGE • GALLERY • </span><span>FADEFORGE • GALLERY • </span>
+          <span>FADEFORGE • GALLERY • </span><span>FADEFORGE • GALLERY • </span>
+          <span>FADEFORGE • GALLERY • </span><span>FADEFORGE • GALLERY • </span>
+          <span>FADEFORGE • GALLERY • </span><span>FADEFORGE • GALLERY • </span>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span>FADEFORGE • GALLERY • </span><span>FADEFORGE • GALLERY • </span>
+          <span>FADEFORGE • GALLERY • </span><span>FADEFORGE • GALLERY • </span>
+          <span>FADEFORGE • GALLERY • </span><span>FADEFORGE • GALLERY • </span>
+          <span>FADEFORGE • GALLERY • </span><span>FADEFORGE • GALLERY • </span>
+        </div>
+      </div>
+    </div>
+    <a class="btn primary" data-bind="booking" href="book.html">Book Your Chair</a>
+    <p class="mini">© 2025 Crafted by <a href="https://dacso.uk" target="_blank" rel="noopener noreferrer"><strong>Dacso</strong></a></p>
+  </footer>
+  <script type="module">
+    const lightbox = document.getElementById('gallery-lightbox');
+    if (lightbox) {
+      const lightboxImg = lightbox.querySelector('img');
+      const closeBtn = lightbox.querySelector('.lightbox-close');
+
+      const openLightbox = (img) => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('show');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeLightbox = () => {
+        lightbox.classList.remove('show');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      document.querySelectorAll('.gallery-grid img').forEach((img) => {
+        img.addEventListener('click', () => openLightbox(img));
+      });
+
+      lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeLightbox();
+        }
+      });
+    }
+  </script>
+  <script type="module" src="main.js"></script>
+  <script type="module" src="ember-vortex.js"></script>
+  <nav class="actionbar">
+    <a class="btn book" href="book.html">Book</a>
+    <a class="btn wa" href="https://wa.me/442079460000?text=Hi%20FadeForge%20Barber%20-%20I%27d%20like%20to%20book%20a%20cut.">WhatsApp</a>
+    <a class="btn call" href="tel:+442079460000">Call</a>
+  </nav>
+</body>
+</html>

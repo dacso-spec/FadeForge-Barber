@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Book Your Cut - FadeForge Barber</title>
+  <meta name="description" content="Book your barber appointment in Shoreditch, London - Choose your service, barber, and time slot."/>
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg">
+  <link rel="canonical" href="https://fadeforge.example/book.html">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="page-transition" aria-hidden="true"></div>
+  <header class="site-header" data-animate>
+    <div class="site-header__inner">
+      <a class="logo" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h4l2 3h4l2 3-4 12h-4L4 3z" fill="currentColor"/></svg>
+        <span>FadeForge</span>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a class="btn ghost" data-bind="booking" href="book.html" aria-current="page">Book</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="page-main">
+    <section class="page-hero" data-animate>
+      <div class="container booking-main">
+        <h1 class="split">Book Your Cut</h1>
+        <p>Select your service, choose your barber, and pick your perfect time slot.</p>
+      </div>
+    </section>
+    <section class="section" data-animate>
+      <div class="container booking-main">
+        <div class="booking-progress">
+          <div class="progress-step active" data-step="1">
+            <div class="step-number">1</div>
+            <span>Service</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="2">
+            <div class="step-number">2</div>
+            <span>Barber</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="3">
+            <div class="step-number">3</div>
+            <span>Date & Time</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="4">
+            <div class="step-number">4</div>
+            <span>Details</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="5">
+            <div class="step-number">5</div>
+            <span>Confirm</span>
+          </div>
+        </div>
+        <form id="booking-form" class="booking-form">
+          <div class="booking-step active" data-step="1">
+            <h2 class="split">Choose Your Service</h2>
+            <p>Select the service you'd like to book.</p>
+            <div class="service-grid">
+              <label class="service-card">
+                <input type="radio" name="service" value="classic-cut" data-price="28" data-duration="30" required>
+                <div class="service-card-content">
+                  <h3>Classic Cut</h3>
+                  <p class="service-desc">30 min • Scissor cut or buzz, hot lather neck shave, finish & style.</p>
+                  <p class="service-price">£28</p>
+                </div>
+              </label>
+              <label class="service-card">
+                <input type="radio" name="service" value="skin-fade" data-price="32" data-duration="40" required>
+                <div class="service-card-content">
+                  <h3>Skin Fade</h3>
+                  <p class="service-desc">40 min • Tight gradient to skin, detailed finish, style product.</p>
+                  <p class="service-price">£32</p>
+                </div>
+              </label>
+              <label class="service-card">
+                <input type="radio" name="service" value="beard-sculpt" data-price="15" data-duration="20" required>
+                <div class="service-card-content">
+                  <h3>Beard Sculpt</h3>
+                  <p class="service-desc">20 min • Clippers/scissor define, hot towel, oils & balm.</p>
+                  <p class="service-price">£15</p>
+                </div>
+              </label>
+              <label class="service-card">
+                <input type="radio" name="service" value="hot-towel-shave" data-price="22" data-duration="30" required>
+                <div class="service-card-content">
+                  <h3>Hot Towel Shave</h3>
+                  <p class="service-desc">30 min • Steam towels, rich lather, luxury blade work, post-shave.</p>
+                  <p class="service-price">£22</p>
+                </div>
+              </label>
+              <label class="service-card">
+                <input type="radio" name="service" value="cut-beard" data-price="45" data-duration="55" required>
+                <div class="service-card-content">
+                  <h3>Cut + Beard</h3>
+                  <p class="service-desc">55 min • Classic or fade plus full beard shape & finish.</p>
+                  <p class="service-price">£45</p>
+                </div>
+              </label>
+              <label class="service-card">
+                <input type="radio" name="service" value="kids-cut" data-price="18" data-duration="25" required>
+                <div class="service-card-content">
+                  <h3>Kids Cut</h3>
+                  <p class="service-desc">25 min • Ages 5–12. Gentle and patient.</p>
+                  <p class="service-price">£18</p>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="booking-step" data-step="2">
+            <h2 class="split">Choose Your Barber</h2>
+            <p>Select your preferred barber or any available.</p>
+            <div class="barber-grid">
+              <label class="barber-card">
+                <input type="radio" name="barber" value="marcus" required>
+                <div class="barber-card-content">
+                  <div class="barber-avatar">M</div>
+                  <h3>Marcus</h3>
+                  <p>Specialist in fades & modern cuts</p>
+                  <span class="barber-badge">Available</span>
+                </div>
+              </label>
+              <label class="barber-card">
+                <input type="radio" name="barber" value="james" required>
+                <div class="barber-card-content">
+                  <div class="barber-avatar">J</div>
+                  <h3>James</h3>
+                  <p>Classic cuts & hot towel shaves</p>
+                  <span class="barber-badge">Available</span>
+                </div>
+              </label>
+              <label class="barber-card">
+                <input type="radio" name="barber" value="alex" required>
+                <div class="barber-card-content">
+                  <div class="barber-avatar">A</div>
+                  <h3>Alex</h3>
+                  <p>Beard sculpting & precision work</p>
+                  <span class="barber-badge">Available</span>
+                </div>
+              </label>
+              <label class="barber-card">
+                <input type="radio" name="barber" value="any" required>
+                <div class="barber-card-content">
+                  <div class="barber-avatar">?</div>
+                  <h3>Any Available</h3>
+                  <p>We'll assign the best fit</p>
+                  <span class="barber-badge">Flexible</span>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="booking-step" data-step="3">
+            <h2 class="split">Select Date & Time</h2>
+            <p>Choose your preferred appointment slot.</p>
+            <div class="datetime-selector">
+              <div class="date-picker-section">
+                <label for="booking-date">Date</label>
+                <input type="date" id="booking-date" name="date" required min="">
+              </div>
+              <div class="time-slots-section">
+                <label>Available Time Slots</label>
+                <div class="time-slots" id="time-slots">
+                  <p class="time-slots-placeholder">Select a date to see available times</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="booking-step" data-step="4">
+            <h2 class="split">Your Details</h2>
+            <p>We'll use this to confirm your appointment.</p>
+            <div class="form-fields">
+              <div class="form-group">
+                <label for="customer-name">Full Name *</label>
+                <input type="text" id="customer-name" name="name" required placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="customer-email">Email *</label>
+                <input type="email" id="customer-email" name="email" required placeholder="john@example.com">
+              </div>
+              <div class="form-group">
+                <label for="customer-phone">Phone Number *</label>
+                <input type="tel" id="customer-phone" name="phone" required placeholder="+44 20 7946 0000">
+              </div>
+              <div class="form-group">
+                <label for="customer-notes">Special Requests (Optional)</label>
+                <textarea id="customer-notes" name="notes" rows="3" placeholder="Any specific preferences or notes for your barber..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="booking-step" data-step="5">
+            <h2 class="split">Confirm Your Booking</h2>
+            <div class="booking-summary">
+              <div class="summary-item">
+                <span class="summary-label">Service:</span>
+                <span class="summary-value" id="summary-service">-</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Barber:</span>
+                <span class="summary-value" id="summary-barber">-</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Date:</span>
+                <span class="summary-value" id="summary-date">-</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Time:</span>
+                <span class="summary-value" id="summary-time">-</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Duration:</span>
+                <span class="summary-value" id="summary-duration">-</span>
+              </div>
+              <div class="summary-item summary-total">
+                <span class="summary-label">Total:</span>
+                <span class="summary-value" id="summary-price">-</span>
+              </div>
+            </div>
+            <div class="booking-policy">
+              <p><strong>Cancellation Policy:</strong> Please cancel at least 2 hours before your slot. No-shows may be charged up to 50% of the service price.</p>
+            </div>
+          </div>
+          <div class="booking-nav">
+            <button type="button" class="btn ghost" id="prev-btn" style="display:none;">Previous</button>
+            <button type="button" class="btn primary" id="next-btn">Next</button>
+            <button type="submit" class="btn primary" id="submit-btn" style="display:none;">Confirm Booking</button>
+          </div>
+        </form>
+        <div id="booking-success" class="booking-success" style="display:none;">
+          <div class="success-content">
+            <div class="success-icon">✓</div>
+            <h2>Booking Confirmed!</h2>
+            <p>Your appointment has been scheduled. You'll receive a confirmation email shortly.</p>
+            <div class="success-details" id="success-details"></div>
+            <a href="index.html" class="btn primary">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="cta-footer">
+    <p class="mini">© 2025 Crafted by <a href="https://dacso.uk" target="_blank" rel="noopener noreferrer"><strong>Dacso</strong></a></p>
+  </footer>
+  <script type="module" src="main.js"></script>
+  <script type="module" src="booking.js"></script>
+  <nav class="actionbar">
+    <a class="btn book" href="book.html">Book</a>
+    <a class="btn wa" href="https://wa.me/442079460000?text=Hi%20FadeForge%20Barber%20-%20I%27d%20like%20to%20book%20a%20cut.">WhatsApp</a>
+    <a class="btn call" href="tel:+442079460000">Call</a>
+  </nav>
+</body>
+</html>

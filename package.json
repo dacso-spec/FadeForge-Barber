@@ -1,0 +1,33 @@
+{
+  "name": "fadeforge-barber",
+  "version": "1.0.0",
+  "description": "Premium barber shop website for FadeForge Barber - Shoreditch, London",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite preview --port 3000"
+  },
+  "keywords": [
+    "barber",
+    "shoreditch",
+    "london",
+    "website",
+    "responsive",
+    "modern"
+  ],
+  "author": "FadeForge Barber",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.2",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "three": "^0.182.0"
+  }
+}
