@@ -1637,6 +1637,10 @@ p {
   .section {
     padding: var(--space-3xl) var(--section-x);
   }
+
+  .section[data-ember-vortex] {
+    padding-top: var(--space-2xl);
+  }
   
   .cards {
     grid-template-columns: 1fr;
